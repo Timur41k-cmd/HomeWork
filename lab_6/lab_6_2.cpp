@@ -2,11 +2,13 @@
 using namespace std;
 int main()
 {
-    int num,count,first;
+    int num,count=0,first=0;
     cin >> num;
     do{
-        num = num / 10;
+        
         count = count+1;
-    }while(num > 10);
-    cout << "Количество цифр: " << count << endl << "Первая цифра: " << num;
+        first = num;
+        num = num / 10;
+    }while(num>0);
+    cout << "Количество цифр: " << count << endl << "Первая цифра: " << first;
 }
